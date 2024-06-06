@@ -33,4 +33,4 @@ RUN apt-get install -y \
     zsh
 RUN rm -rf /var/cache/apt
 
-CMD /usr/bin/zsh
+CMD exec /bin/bash -c "echo 'Container started.'; trap : TERM INT; sleep infinity & wait"

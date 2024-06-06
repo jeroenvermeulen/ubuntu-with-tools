@@ -1,0 +1,9 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: ubuntu-with-tools
+  namespace: default
+spec:
+  containers:
+    - name: ubuntu-with-tools
+      image: jcmvermeulen/ubuntu-with-tools:latest
