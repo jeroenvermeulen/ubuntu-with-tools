@@ -19,6 +19,7 @@ RUN apt-get update && \
         nano \
         ncdu \
         net-tools \
+        netcat-openbsd \
         nmap \
         php-cli \
         plocate \
