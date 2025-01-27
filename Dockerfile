@@ -23,7 +23,8 @@ RUN apt-get update && \
         nmap \
         php-cli \
         plocate \
-        python3-pip \
+        postgresql-client \
+        python3 \
         python3-pip \
         redis-tools \
         screen \
