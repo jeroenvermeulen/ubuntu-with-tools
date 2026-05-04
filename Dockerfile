@@ -40,7 +40,9 @@ RUN apt-get update && \
         yq \
         zsh && \
     apt-get clean && \
-    wget https://github.com/Tcp-Ping/Tcping/releases/download/v0.1.1/linux-amd64-tcping -O /usr/local/bin/tcping && \
     rm -rf /var/lib/apt/lists/* /var/log/*
+
+RUN wget https://github.com/Tcp-Ping/Tcping/releases/download/v0.1.1/linux-amd64-tcping -O /usr/local/bin/tcping && \
+    chmod +x /usr/local/bin/tcping
 
 CMD exec /bin/bash -c "echo 'Container started.'; trap : TERM INT; sleep infinity & wait"
